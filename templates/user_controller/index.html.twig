@@ -1,0 +1,15 @@
+
+<body>
+    <h1>Welcome to the User Page</h1>
+    <button id="SignUpButton">Sign Up</button>
+    <button id="loginButton">Login</button>
+    <script>
+        document.getElementById('SignUpButton').addEventListener('click', function() {
+            window.location.href = '{{ path('register_page') }}';
+        });
+          document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = '{{ path('login_page') }}';
+        });
+    </script>
+</body>
+

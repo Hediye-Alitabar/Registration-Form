@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+
+{% block body %}
+<h2>Update</h2>
+
+{% if error %}
+    <div class="error">{{ error }}</div>
+{% endif %}
+
+<form action="/update" method="post">
+    <div>
+        <label>Current Name:</label>
+        <input type="text" id="currentName" name="currentName" required>
+    </div>
+    <div>
+        <label>New Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label>New username:</label>
+        <input type="text" id="userName" name="userName" required>
+    </div>
+    <div>
+        <label>New Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        
+    </div>
+</form>
+{% endblock %}
